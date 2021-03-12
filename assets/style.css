@@ -1,0 +1,49 @@
+* {
+    margin: 20px;
+    font-family: cursive;
+}
+
+
+body {
+    background-image: url("./clouds.jpeg");
+    border-color: royalblue;
+    border-width: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-repeat:no-repeat;
+}
+
+.search {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#sbtn {
+    padding: 0.5px;
+    width: 10vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.input-bar {
+    width: 50vh;
+    border: none;
+    outline: none;
+    border-radius: 16px 0px 16px 0px;
+    border: 3px solid orange;
+}
+
+h1 {
+   text-align: center; 
+}
+
+.row .col { 
+    height: 275px; 
+    background: rgb(245, 245, 242); 
+    color: black;
+} 
+
+#current-weather {
+    justify-content: flex-end;
+}
