@@ -1,12 +1,12 @@
 * {
-    margin: 20px;
+    margin: 10px;
     font-family: cursive;
 }
 
 
 body {
     background-image: url("./clouds.jpeg");
-    border-color: royalblue;
+    border-color: lightgoldenrodyellow;
     border-width: 20px;
     width: 100vw;
     height: 100vh;
@@ -25,12 +25,13 @@ body {
     margin-left: 35%;
     border: thin;
     border-radius: 10px;
-    font-size: x-large;
+    font-size: large;
     display: block;
     border-color: black;
     border: dotted;
     margin-right: 20px;
 }
+
 
 #sbtn {
     padding: 0.5px;

@@ -21,6 +21,7 @@ var date2 =document.querySelector('#date2');
 var date3 =document.querySelector('#date3');
 var date4 =document.querySelector('#date4');
 var date5 =document.querySelector('#date5');
+var icon =document.querySelector('#icon');
 const state = {};
 
 
@@ -33,8 +34,10 @@ function weather(lat, lon) {
     .then(res => res.json())
     .then(data => { 
         console.log("Current Day",data)
+        console.log(data.current.weather[0].icon)
 //set the text content of the elements to equal data in the respone
     //cityTag.textContent = data.timezone
+    icon.textContent = data.current.weather[0].icon
     temp.textContent = data.current.temp
     humidity.textContent = data.current.humidity
     wind.textContent = data.current.wind_speed
@@ -59,7 +62,7 @@ function fiveDay() {
     .then(data => { 
         console.log("5DAY",data)
 
-//set the text content of the elements to equal data in the respone
+//set the text content of the elements to equal data in the response
     temp1.textContent = data.list[1].main.temp
     temp2.textContent = data.list[2].main.temp
     temp3.textContent = data.list[3].main.temp
