@@ -22,7 +22,11 @@ var date3 =document.querySelector('#date3');
 var date4 =document.querySelector('#date4');
 var date5 =document.querySelector('#date5');
 var icon =document.querySelector('#icon');
-const state = {};
+var icon2 =document.querySelector('#icon2');
+var icon3 =document.querySelector('#icon3');
+var icon4 =document.querySelector('#icon4');
+var icon5 =document.querySelector('#icon5');
+
 
 
 //fetch weather Data
@@ -36,8 +40,12 @@ function weather(lat, lon) {
         console.log("Current Day",data)
         console.log(data.current.weather[0].icon)
 //set the text content of the elements to equal data in the respone
-    //cityTag.textContent = data.timezone
-    icon.textContent = data.current.weather[0].icon
+
+    const iconURL =
+    'http://openweathermap.org/img/w/' +
+    data.current.weather[0].icon +
+    '.png';
+  icon.setAttribute('src', iconURL);
     temp.textContent = data.current.temp
     humidity.textContent = data.current.humidity
     wind.textContent = data.current.wind_speed
@@ -79,6 +87,32 @@ function fiveDay() {
     date4.textContent = data.list[26].dt_txt
     date5.textContent = data.list[34].dt_txt
     cityTag.textContent = data.city.name
+    
+    const iconURL1 =
+    'http://openweathermap.org/img/w/' +
+    data.list[1].weather[0].icon +
+    '.png';
+    icon1.setAttribute('src', iconURL1);
+    const iconURL2 =
+    'http://openweathermap.org/img/w/' +
+    data.list[2].weather[0].icon +
+    '.png';
+    icon2.setAttribute('src', iconURL2);
+    const iconURL3 =
+    'http://openweathermap.org/img/w/' +
+    data.list[3].weather[0].icon +
+    '.png';
+    icon3.setAttribute('src', iconURL3);
+    const iconURL4 =
+    'http://openweathermap.org/img/w/' +
+    data.list[4].weather[0].icon +
+    '.png';
+    icon4.setAttribute('src', iconURL4);
+    const iconURL5 =
+    'http://openweathermap.org/img/w/' +
+    data.list[5].weather[0].icon +
+    '.png';
+    icon5.setAttribute('src', iconURL5);
 
 
 weather(data.city.coord.lat, data.city.coord.lon)
