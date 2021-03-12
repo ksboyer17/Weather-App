@@ -10,17 +10,20 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
+    <div class="jumbotron container-fluid mt-2 text-center p-2 w-100 p-3" style="background-color:#404040 ;color: white;">
         <h1> <strong>Weather Dashboard</strong></h1>
     </div>
     <div class="search">
         <label for="Search-bar"></label>
         <input id="input" type="text" class="input-bar" placeholder="Type a City and Click the Search Button">
         <button id="sbtn">Search</button>
+        <button class="btn" type="button" id="clear-history">Clear history</button>
+        <ul class="list-group"></ul>
     </div>     
 
-            <div class="col-sm-12 float-none" id="current-weather">
-                <h3 class="city-name mb-1 mt-2 bolder " id="current-city"></h3>
+            <div id="current-weather">
+                <h2>Current Weather</h2>
+                <h3 class="city-name bolder " id="current-city"></h3>
                 <p>Temperature:<span class="current" id="temperature"></span></p>
                 <p>Humidity:<span class="current" id="humidity"></span></p> 
                 <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
@@ -30,38 +33,42 @@
         <!--Row for future data to be dumped here-->
         <div class="col-sm-12" id="future-weather">
             <h3>5-Day Forecast:</h3>
+            <h4 id="cityName">Displayed Location:</h4>
             <div class="row text-light">
                 <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
                     <p id="fDate0"></p>
                     <p id="fImg0"></p>
-                    <p>Temp:<span id="fTemp0"></span></p>
-                    <p>Humidity:<span id="fHumidity0"></span></p>
+                    <p>Date<span id="date1"></span></p>
+                    <p>Temp:<span id="temperature1"></span></p>
+                    <p>Humidity:<span id="humidity1"></span></p>
                 </div>
                 <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
                     <p id="fDate1"></p>
                     <p id="fImg1"></p>
-                    <p>Temp:<span id="fTemp1"></span></p>
-                    <p>Humidity:<span id="fHumidity1"></span></p>
+                    <p>Date<span id="date2"></span></p>
+                    <p>Temp:<span id="temperature2"></span></p>
+                    <p>Humidity:<span id="humidity2"></span></p>
                 </div>
                 <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
                     <p id="fDate2"></p>
                     <p id="fImg2"></p>
-                    <p>Temp:<span id="fTemp2"></span></p>
-                    <p>Humidity:<span id="fHumidity2"></span></p>
+                    <p>Date<span id="date3"></span></p>
+                    <p>Temp:<span id="temperature3"></span></p>
+                    <p>Humidity:<span id="humidity3"></span></p>
                 </div>
                 <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
                     <p id="fDate3"></p>
                     <p id="fImg3"></p>
-                    <p>Temp:<span id="fTemp3"></span></p>
-                    <p>Humidity:<span id="fHumidity3"></span></p>
+                    <p>Date<span id="date4"></span></p>
+                    <p>Temp:<span id="temperature4"></span></p>
+                    <p>Humidity:<span id="humidity4"></span></p>
                 </div>
                 <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
-                    <p id="fDate4"></p>
-                    <p id="fImg4"></p>
-                    Temperature (Fahrenhiet):<p id="temperature"></p>
-                    Humidity:<p id="humidity"></p>
-                    Windspeed(MPH):<p id="wind"></p>
-                    UV Index:<p id="index"></p>
+                    <p id="fDate3"></p>
+                    <p id="fImg3"></p>
+                    <p>Date<span id="date5"></span></p>
+                    <p>Temp:<span id="temperature5"></span></p>
+                    <p>Humidity:<span id="humidity5"></span></p>
                 </div>
             </div>
         </div>

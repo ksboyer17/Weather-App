@@ -10,7 +10,6 @@ body {
     border-width: 20px;
     width: 100vw;
     height: 100vh;
-    background-repeat:no-repeat;
 }
 
 .search {
@@ -19,12 +18,34 @@ body {
     flex-direction: column;
 }
 
+
+#current-weather {
+    height: 35vh;
+    width: 50vw;
+    margin-left: 35%;
+    border: thin;
+    border-radius: 10px;
+    font-size: x-large;
+    display: block;
+    border-color: black;
+    border: dotted;
+    margin-right: 20px;
+}
+
 #sbtn {
     padding: 0.5px;
     width: 10vw;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
+    background-color: blue;
+color: white;
+}
+.btn {
+width:10vw;
+padding: 0.1px;
+background-color: blue;
+color: white;
 }
 .input-bar {
     width: 50vh;
