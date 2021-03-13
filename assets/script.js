@@ -50,7 +50,7 @@ function weather(lat, lon) {
 //set the text content of the elements to equal data in the respone
 
     const iconURL =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.current.weather[0].icon +
     '.png';
   icon.setAttribute('src', iconURL);
@@ -81,7 +81,7 @@ function weatherHistory(searchName){
 
 function fiveDay() {
     var cityName = cityInput.value
-    const API_URL2 = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=imperial`
+    const API_URL2 = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${API_KEY}&units=imperial`
     fetch(API_URL2)
     .then(res => res.json())
     .then(data => { 
@@ -110,27 +110,27 @@ function fiveDay() {
     cityTag.textContent = data.city.name
     //statically pulled icons for days of the week
     const iconURL1 =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.list[1].weather[0].icon +
     '.png';
     icon1.setAttribute('src', iconURL1);
     const iconURL2 =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.list[2].weather[0].icon +
     '.png';
     icon2.setAttribute('src', iconURL2);
     const iconURL3 =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.list[3].weather[0].icon +
     '.png';
     icon3.setAttribute('src', iconURL3);
     const iconURL4 =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.list[4].weather[0].icon +
     '.png';
     icon4.setAttribute('src', iconURL4);
     const iconURL5 =
-    'http://openweathermap.org/img/w/' +
+    'https://openweathermap.org/img/w/' +
     data.list[5].weather[0].icon +
     '.png';
     icon5.setAttribute('src', iconURL5);
