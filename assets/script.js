@@ -26,13 +26,21 @@ var icon2 =document.querySelector('#icon2');
 var icon3 =document.querySelector('#icon3');
 var icon4 =document.querySelector('#icon4');
 var icon5 =document.querySelector('#icon5');
+var previousHistory;
 
+//function loadSearchHistory() {
+//if statement local storage get item of the history is false then
+//          then your previousHistory should be equal to empty array
+            //else 
+            //previous history = local storage get item
+            // if there is a history you have to create elements and display them as well... denver etc..
+//}
 
+//loadSearchHistory();
 
 //fetch weather Data
 function weather(lat, lon) {
     var part = "hourly,daily"
-
     const API_URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${API_KEY}&units=imperial`
     fetch(API_URL)
     .then(res => res.json())
@@ -59,8 +67,17 @@ function weather(lat, lon) {
 searchButton.addEventListener("click", function(){
 //when we click run the weather function
     // weather();
+   // weatherHistory(cityInput.value);
     fiveDay();
 }) 
+
+function weatherHistory(searchName){
+   //now push into local storage, get item set item, push in new search term. 
+   localStorage.setItem("cityStorage", searchName);
+   console.log(localStorage.getItem("cityStorage"));
+}
+
+
 
 function fiveDay() {
     var cityName = cityInput.value
@@ -69,6 +86,10 @@ function fiveDay() {
     .then(res => res.json())
     .then(data => { 
         console.log("5DAY",data)
+    //save search to local storage
+       // if (!previousHistory.includes(cityInput.value)){
+       //     weatherHistory(cityInput.value);
+      //  }
 
 //set the text content of the elements to equal data in the response
     temp1.textContent = data.list[1].main.temp
@@ -87,7 +108,7 @@ function fiveDay() {
     date4.textContent = data.list[26].dt_txt
     date5.textContent = data.list[34].dt_txt
     cityTag.textContent = data.city.name
-    
+    //statically pulled icons for days of the week
     const iconURL1 =
     'http://openweathermap.org/img/w/' +
     data.list[1].weather[0].icon +

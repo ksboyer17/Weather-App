@@ -25,11 +25,12 @@ body {
     margin-left: 35%;
     border: thin;
     border-radius: 10px;
-    font-size: large;
+    font-size: medium;
     display: block;
     border-color: black;
     border: dotted;
     margin-right: 20px;
+    padding: 2px;
 }
 
 
@@ -40,14 +41,16 @@ body {
     margin-bottom: 5px;
     border-radius: 5px;
     background-color: blue;
-color: white;
+    color: white;
 }
+
 .btn {
-width:10vw;
-padding: 0.1px;
-background-color: blue;
-color: white;
+    width:10vw;
+    padding: 0.1px;
+    background-color: blue;
+    color: white;
 }
+
 .input-bar {
     width: 50vh;
     border: none;
@@ -60,12 +63,14 @@ h1 {
    text-align: center; 
 }
 
+h2 {
+    font-size: medium;
+    text-decoration: underline;
+}
+
 .row .col { 
     height: 275px; 
     background: rgb(245, 245, 242); 
     color: black;
 } 
 
-#current-weather {
-    justify-content: flex-end;
-}
