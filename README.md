@@ -16,3 +16,5 @@ The purpose of this project was to allow users to access the current weather and
 
 ![Screenshot of Weather Application](https://github.com/ksboyer17/Weather-App/blob/main/assets/Screen%20Shot%202021-03-13%20at%202.16.25%20PM.png?raw=true)
 
+**Contact Information**
+ksboyerii@gmail.com
